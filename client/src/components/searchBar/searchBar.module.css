@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    height: 3vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 2vw;
+    background-color: #1DF13F;
+    width: 35vw;
+    height: 3vw;
+    border-radius: 10px;
+}
+
+.searchButton{
+    height: 1vw;
+    width: 1vw;
+    background-color: white;
+    padding: 0.5vw;
+    border-radius: 999999rem;
+}
+
+.results{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background-color: #1DF13F;
+    z-index: 10;
+}
+
+.button{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchBar{
+    width: 30vw;
+    height: 1vw;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    padding: 0.5vw;
+}
+
+.close{
+    background-color: red;
+    width: 1vw;
+    height: 1vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 30vw;
+    top: 1vw;
+}
+
+.logout{
+    height: 2vw;
+    width: 2vw;
+    background-color: #1DF13F;
+    padding: 0.5vw;
+    border-radius: 10px;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+}
+
+.logout img{
+    height: 1.6vw;
+    width: 1.6vw;
+    filter: brightness(0) invert(1);
+}
+
+.allResults{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}

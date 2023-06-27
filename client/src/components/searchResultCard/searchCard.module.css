@@ -1,0 +1,26 @@
+.container{
+    height: 7vw;
+    width: 30%;
+    z-index: 10;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw;
+    margin-top: 1vw;
+    text-decoration: none;
+    color: black;
+}
+
+.container img{
+    height: 5vw;
+    width: 5vw;
+    margin: 1vw;
+}
+
+.container p{
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
+    margin-right: 5vw;
+}

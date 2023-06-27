@@ -1,0 +1,81 @@
+.container{
+    background-color: #D9D9D9;
+    width: 50vw;
+    height: fit-content;
+    padding: 1vw;
+    border-radius: 0.5vw;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePhoto{
+    height: 7vw;
+    width: 7vw;
+    position: relative;
+    top: -4vw;
+    border-radius: 999999rem;
+    object-fit: cover;
+}
+
+.coverPhoto{
+    height: 20vw;
+    width: 50vw;
+    border-top-left-radius: 0.5vw;
+    border-top-right-radius: 0.5vw;
+    object-fit: cover;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2vw;
+}
+
+.nickname{
+    font-size: 5vw;
+}
+
+.textInfo{
+    margin: 0.4vw;
+}
+
+.button{
+    background-color: #1DF13F;
+    border: none;
+    color: white;
+    height: 2.5vw;
+    width: 9vw;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+    cursor: pointer;
+    margin: 1vw;
+}
+
+.buttonImage{
+    height: 1vw;
+    width: 1vw;
+    filter: brightness(0) invert(1);
+    transition: 1s;
+}
+
+.button:hover{
+    transform: scale(1.2);
+}
