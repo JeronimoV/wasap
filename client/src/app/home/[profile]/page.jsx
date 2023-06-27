@@ -6,7 +6,9 @@ import styles from "./profile.module.css"
 const Profile = () => {
 
     const backButton = () => {
-        window.location.href = "/home"
+        if(typeof window !== "undefined"){
+            window.location.href = "/home"
+        }
     }
 
     return (
