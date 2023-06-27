@@ -5,7 +5,7 @@ require("dotenv").config();
 const { PORTDATABASE, HOST, PASSWORD, DBNAME, USER } = process.env;
 
 const sequelize = new Sequelize(
-  `postgres://${USER}:${PASSWORD}@${HOST}:${PORTDATABASE}/${DBNAME}`
+  `postgresql://${USER}:${PASSWORD}@${HOST}:${PORTDATABASE}/${DBNAME}`
 );
 
 const modelList = [];
