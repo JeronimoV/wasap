@@ -16,6 +16,12 @@ const EditView = () => {
 
     const router = useRouter()
 
+    const backButton = () => {
+        if(typeof window !== "undefined"){
+            window.location.href = "/home"
+        }
+    }
+
     const uploadImage = async (e) => {
         const fileName = e.target.files[0]
         const imageRef = ref(storage, `${e.target.name}/${fileName.name + v4()}`)
@@ -86,9 +92,10 @@ const EditView = () => {
 
     return (
         <div className={styles.container}>
+            <button onClick={backButton} className={styles.button2}><img className={styles.buttonImg2} src='https://www.svgrepo.com/show/376758/arrow-left.svg'/></button>
             <div className={styles.form}>
                 <div className={styles.image}>
-                <label>Cover Photo:</label>
+                <label className={styles.imageTitle}>Cover Photo:</label>
                     <input className={styles.inputImage} onChange={handleInput} name="coverPhoto" value={newData.coverPhoto} placeholder="Cover Photo"/>
                     <label className={styles.inputFile}>
                         Select a file
@@ -96,7 +103,7 @@ const EditView = () => {
                     </label>
                 </div>
                 <div className={styles.image}>
-                    <label>Profile Photo:</label>
+                    <label className={styles.imageTitle}>Profile Photo:</label>
                     <input className={styles.inputImage} onChange={handleInput} name="picture" value={newData.picture} placeholder="Profile Photo"/>
                     <label className={styles.inputFile}>
                         Select a file

@@ -5,3 +5,19 @@
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
+
+p{
+    font-size: 1vw;
+}
+
+input{
+    font-size: 1vw;
+}
+
+button{
+    font-size: 1vw;
+}
+
+label{
+    font-size: 1vw;
+}

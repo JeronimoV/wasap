@@ -42,6 +42,7 @@
     border: none;
     border-radius: 10px;
     padding: 0.5vw;
+    font-size: 1vw;
 }
 
 .form button{
@@ -52,9 +53,11 @@
     color: white;
     border-radius: 99999rem;
     margin-top: 1vw;
+    font-size: 1vw;
 }
 
 .link{
     color: #000000;
     text-decoration: none;
+    font-size: 1vw;
 }

@@ -52,6 +52,17 @@
     cursor: pointer;
 }
 
+.imageTitle{
+    height: 2vw;
+    width: 30%;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1vw;
+    border-radius: 0.5vw;
+}
+
 .displayNone{
     display: none;
 }
@@ -141,3 +152,20 @@
     font-size: 3vw;
 }
 
+.button2{
+    background-color: #1DF13F;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5vw;
+    width: 5vw;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+
+.buttonImg2{
+    height: 2vw;
+    width: 2vw;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+}
