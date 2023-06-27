@@ -22,7 +22,7 @@ const Registerform = () => {
 
     const submitRegister = async(e) => {
         e.preventDefault()
-        await fetch("http://localhost:3001/user/register", {
+        await fetch("https://back-end-production-047b.up.railway.app/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

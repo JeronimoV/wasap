@@ -14,7 +14,7 @@ const connectUser = (socket) => {
     }, [])
 
     useEffect(() => {
-        const socket = io(`http://localhost:3001`)
+        const socket = io(`https://back-end-production-047b.up.railway.app`)
         socket.on("connect", () => {
             socket.emit("connect_user", id)
         })

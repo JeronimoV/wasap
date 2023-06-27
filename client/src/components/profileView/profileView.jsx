@@ -17,7 +17,7 @@ const ProfileView = () => {
     const router = useRouter()
 
     const getUserData = async() => {
-        await fetch(`http://localhost:3001/user/profile`, {
+        await fetch(`https://back-end-production-047b.up.railway.app/user/profile`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

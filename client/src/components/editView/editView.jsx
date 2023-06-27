@@ -25,7 +25,7 @@ const EditView = () => {
     }
 
     const getUserData = async (actualId) => {
-        await fetch(`http://localhost:3001/user/${actualId}`).then(response => response.json()).then(response => setUserData(response))
+        await fetch(`https://back-end-production-047b.up.railway.app/user/${actualId}`).then(response => response.json()).then(response => setUserData(response))
     }
 
     useEffect(() => {
@@ -50,7 +50,7 @@ const EditView = () => {
 
     const sendData = async (e) => {
         e.preventDefault()
-        await fetch("http://localhost:3001/user/update", {
+        await fetch("https://back-end-production-047b.up.railway.app/user/update", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

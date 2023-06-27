@@ -15,7 +15,7 @@ const Chats = ({actualSocket}) => {
 
     const getChats = async (UserId) => {
         console.log("Este chaval",UserId);
-        await fetch(`http://localhost:3001/chat/${UserId}`).then(response => response.json()).then(response => setAllChats(response))
+        await fetch(`https://back-end-production-047b.up.railway.app/chat/${UserId}`).then(response => response.json()).then(response => setAllChats(response))
     }
 
     useEffect(() => {

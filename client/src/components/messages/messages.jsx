@@ -18,7 +18,7 @@ const Messages = ({actualSocket}) => {
     const actualChatIdToSet = useSelector(value => value.saveChatInfo.chatId)
 
     const getChatInfo = async() => {
-        await fetch(`http://localhost:3001/chat/${id}`).then(response => response.json()).then(response => {
+        await fetch(`https://back-end-production-047b.up.railway.app/chat/${id}`).then(response => response.json()).then(response => {
             setChatInfo(response)
     })
     }

@@ -14,7 +14,7 @@ const LoginForm = () => {
 
     const loginSubmit = async (e) => {
         e.preventDefault()
-        await fetch(`http://localhost:3001/user/login`, {
+        await fetch(`https://back-end-production-047b.up.railway.app/user/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
