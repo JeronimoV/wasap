@@ -6,7 +6,7 @@ const ChatCard = ({info}) => {
 
     const dispatch = useDispatch()
 
-    console.log(info);
+    console.log("la info:", info);
 
     const openChat = () => {
         dispatch(saveChatId(info.ChatsData.id))

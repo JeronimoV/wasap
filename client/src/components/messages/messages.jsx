@@ -8,7 +8,7 @@ import { useSelector } from "react-redux"
 const Messages = ({actualSocket}) => {
 
     const [id, setId] = useState(null)
-    const [chatInfo, setChatInfo] = useState(null)
+    const [chatInfo, setChatInfo] = useState([])
     const [newMessage, setNewMessage] = useState("")
     const [actualFriendId, setActualFriendId] = useState(null)
     const [actualChatId, setActualChatId] = useState(null)
@@ -26,7 +26,7 @@ const Messages = ({actualSocket}) => {
     const findChat = () => {
         for (let i = 0; i < chatInfo.length; i++) {
             for (let j = 0; j < chatInfo.length; j++) {
-                if(chatInfo[i].ChatsData.FriendId === actualFriendId || chatInfo[i].ChatsData.FriendId === id){
+                if((chatInfo[i].ChatsData.FriendId === actualFriendId && chatInfo[i].ChatsData.UserId === id || (chatInfo[i].ChatsData.FriendId === id && chatInfo[i].ChatsData.UserId === actualFriendId))){
                     return i
                 }
             }
@@ -36,10 +36,10 @@ const Messages = ({actualSocket}) => {
     console.log(messageToShow);
 
     useEffect(() => {
-        if(id && chatInfo === null){
+        if(id){
             getChatInfo()
         }
-    }, [id])
+    }, [id, actualFriendId])
 
     useEffect(() => {
         if(actualFriendIdToSet, actualChatIdToSet){
@@ -51,13 +51,13 @@ const Messages = ({actualSocket}) => {
     
     useEffect(() => {
         console.log("ENTRE", actualFriendId);
-        if(actualFriendId){
+        if(actualFriendId && chatInfo){
             const index = findChat(actualFriendId)
             console.log("INDEX",index);
             console.log("ESTE", chatInfo);
             setMessageToShow(chatInfo[index].ChatsData.allMessages)
         }
-    }, [actualFriendId])
+    }, [actualFriendId, chatInfo])
 
     useEffect(() => {
         const actualId = localStorage.getItem("id")
@@ -86,6 +86,8 @@ const Messages = ({actualSocket}) => {
     if(!actualSocket){
         return <p>Loading...</p>
     }
+
+    console.log("ESTOS SON LOS MENSAJES QUE RECIBO", messageToShow);
 
     const sendMessage = async (e) => {
         e.preventDefault()
