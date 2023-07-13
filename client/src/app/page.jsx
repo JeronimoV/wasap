@@ -13,7 +13,6 @@ const Landing = () => {
                         <h2>The better app to send messages</h2>
                     </div>
                 </div>
-                <p className={styles.text}>This site is, so to speak, a copy of WhatsApp, it is not a monetized project or intended for serious use, it is a project for JeronimoV's portfolio</p>
                 <div className={styles.buttons}>
                     <Link className={styles.links} href={"/login"}>Log In</Link>
                     <Link className={styles.links} href={"/register"}>Register</Link>
