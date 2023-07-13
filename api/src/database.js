@@ -5,7 +5,7 @@ require("dotenv").config();
 const { PORTDATABASE, HOST, PASSWORD, DBNAME, USER } = process.env;
 
 const sequelize = new Sequelize(
-  `postgresql://postgres:EMXjIZIzT4lVpVdKVQ9o@containers-us-west-131.railway.app:7781/railway`
+  `postgres://wasap_user:QCYwPE1zBJEfiBcEHKm68jk8C77Sx8id@dpg-cio33g15rnup8j6dovv0-a.oregon-postgres.render.com/wasap`
 );
 
 const modelList = [];
